@@ -24,9 +24,8 @@ function getFibonacci(userNum: number): Array<number> {
 
   let fibNumber: number = 0;
 
-  let arrLength: number = fibArr.length;
-
   while (fibNumber < userNum) {
+    let arrLength: number = fibArr.length;
     fibNumber = fibArr[arrLength - 1] + fibArr[arrLength - 2];
     fibArr.push(fibNumber);
   }
