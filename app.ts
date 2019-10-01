@@ -8,10 +8,7 @@ function checkPalindrome(originStr: string): boolean {
     .split("")
     .reverse()
     .join("");
-  if (originStr !== reverseStr) {
-    return false;
-  }
-  return true;
+  return originStr === reverseStr;
 }
 
 console.log(checkPalindrome("nan"));
@@ -27,8 +24,10 @@ function getFibonacci(userNum: number): Array<number> {
 
   let fibNumber: number = 0;
 
+  let arrLength: number = fibArr.length;
+
   while (fibNumber < userNum) {
-    fibNumber = fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2];
+    fibNumber = fibArr[arrLength - 1] + fibArr[arrLength - 2];
     fibArr.push(fibNumber);
   }
 
